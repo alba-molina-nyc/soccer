@@ -1,4 +1,4 @@
-from setup import *
+from flush_data import *
 
 player_list = []
 

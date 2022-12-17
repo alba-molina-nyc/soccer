@@ -5,13 +5,13 @@ with open("players.json", "r") as read_file:
 
 groups = data['response']
 
-
 for group in groups:
     team = group.get('team')
     team_id = team.get('id')
     team_name = team.get('name')
     team_logo = team.get('logo')
     players = group.get('players')
+
 
 for player in players:
     statistics = player.get('statistics')
