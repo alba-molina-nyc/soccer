@@ -8,14 +8,16 @@ groups = data['response']
 
 for group in groups:
     team = group.get('team')
-    id = team.get('id')
+    team_id = team.get('id')
     players = group.get('players')
     
 
 for player in players:
     statistics = player.get('statistics')
-    
-  
+    i_player = player.get('player')
+    player_id = i_player.get('id')
+    player_name = i_player.get('name')
+    photo = i_player.get('photo')
 
 for statistic in statistics:
     games = statistic.get('games')
@@ -57,3 +59,4 @@ for statistic in statistics:
     penalty_saved = penalty.get('saved')
     minutes = games.get('minutes')
 
+# print(minutes)
