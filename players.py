@@ -5,10 +5,9 @@ import pandas as pd
 from datetime import date
 
 
-player_dict = {}
-players_list = []
-player_stat_dict = {}
-players_stat_list = []
+player_dict, player_stat_dict = {}, {}
+players_list, players_stat_list = [], []
+
 def create_player_bio_dict(players):
     for player in players:
         statistics = player.get('statistics')
@@ -95,8 +94,7 @@ def create_player_bio_dict(players):
        
         players_stat_list.append(player_stat_dict)
 
-    df = pd.DataFrame(players_list)
-    fd = pd.DataFrame(players_stat_list)
+    df, fd = pd.DataFrame(players_list),  pd.DataFrame(players_stat_list)
     df.to_csv('/Users/albamolina/files/soccer/players.csv')
     fd.to_csv('/Users/albamolina/files/soccer/player_stats.csv')
 
@@ -104,3 +102,4 @@ def create_player_bio_dict(players):
 
 create_player_bio_dict(players)
 
+# on_goals, total_goals, conceded, assists, saves

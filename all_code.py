@@ -1,9 +1,12 @@
+# Make the imports
 import pandas as pd
 import json
+
+# Open the players.json file, we will sample the data gathered from football API that was saved in the players.json file
 with open("players.json", "r") as read_file:
     data = json.load(read_file)
 
-
+# because the data is in json and therefore dictionaries and I will be needing the different data points below we clean up and set up the data so we can work with it
 groups = data['response']
 
 for group in groups:
